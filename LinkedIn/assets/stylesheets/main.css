@@ -1,0 +1,89 @@
+/* global settings */
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+/* Helper classes */
+
+.w-100{
+    width: 100%;
+}
+
+.text-center{
+    text-align: center;
+}
+
+.row{
+    display: flex;
+}
+
+.grid{
+    display: grid;
+}
+/* justify content from left and right */
+
+.justify-center{
+    justify-content: center;
+}
+
+.justify-space-evenly{
+    justify-content: space-evenly;
+}
+
+.justify-space-between{
+    justify-content: space-between;
+}
+
+/* Align item from top and bottom */
+.align-item-starts{
+    align-items: start;
+}
+
+.align-item-center{
+    align-items: center;
+}
+
+.container{
+    width: 1130px;
+    margin: 0 auto;
+}
+#header .col-2{
+    width: 6%;
+}
+
+#header .logo{
+    width: 10%;
+}
+
+#header .search{
+    width: 90%;
+}
+#header .search input[type="text"]{
+
+}
+
+#header.form{
+
+}
+
+#header .search button{
+    left: 10px;
+    top: 10px;
+    background-color: transparent;
+    position: absolute;
+    border: none;
+}
