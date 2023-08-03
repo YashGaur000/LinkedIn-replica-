@@ -24,11 +24,17 @@ a {
     background-color: #fff;
     margin-bottom: 20px;
 }
-#header .logo img{
+#header .logo {
     width: 10%;
+}
+#header .logo img{
+    width: 100%;
 }
 #header .col-1{
     width: 30%;
+}
+#header .col-2{
+    width: 50%;
 }
 #header .search{
     width: 88%;
