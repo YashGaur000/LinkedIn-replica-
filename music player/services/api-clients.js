@@ -1,6 +1,6 @@
 // async function getData(singerName, callBackFn){
-    async function getData(singerName='sonu nigam'){
-    const URL ='https://itunes.apple.com/search?term=${singerName}&entity=musicVideo.'; // using back slash '\....${}\' for user customization
+    async function getData(singerName='Travis Scott'){
+    const URL =` https://itunes.apple.com/search?term=${singerName}&limit=25`; // using backtick ` ` for user customization
     try{
     const response = await fetch(URL);
     const obj = await response.json();
@@ -8,6 +8,7 @@
     // return callBackFn(obj);
     }
     catch(err){
+        console.log('Error',err);
         throw err;
     }   
 }export default getData;

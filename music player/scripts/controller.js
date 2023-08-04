@@ -19,28 +19,50 @@ async function searchSongs(){
                           <a href="#" class="btn btn-primary">Go somewhere</a>
                         </div>
                       </div> */}
-function songCard(){
-    const colDiv = document.createElement('div');
+function songCard(song){
+    // const colDiv = document.createElement('div');
+    // colDiv.className='col-4';
+    // const cardDiv = document.createElement('div');
+    // cardDiv.style='width: 18rem;';
+    // cardDiv.className='card';
+    // colDiv.appendChild(cardDiv);
+    // const img = document.createElement('img');
+    // img.src=song['artistViewUrl'];
+    // img.className='card-img-top';
+    // cardDiv.appendChild(img);
+    // const cardBody = document.createElement('audio');
+    // cardBody.className='card-body';
+    // cardBody.control='controls';
+    // cardBody.src=song['previewUrl'];
+    // cardDiv.appendChild(cardBody);
+    // document.getElementById('songs').appendChild(cardDiv);
+
+    const colDiv=document.createElement('div');
     colDiv.className='col-4';
-    const cardDiv = document.createElement('div');
-    cardDiv.style='width: 18rem;';
+
+    const cardDiv=createElement('div');
+    cardDiv.style="width: 18rem;";
     cardDiv.className='card';
-    colDiv.appendChild(cardDiv);
+    colDiv.appendChild(colDiv);
+
     const img = document.createElement('img');
-    img.src=song['artistViewUrl'];
     img.className='card-img-top';
-    cardDiv.appendChild('img');
+    img.src=song['artistViewUrl'];
+    cardDiv.appendChild(img);
+
     const cardBody = document.createElement('audio');
     cardBody.className='card-body';
     cardBody.control='controls';
     cardBody.src=song['previewUrl'];
+
     cardDiv.appendChild(cardBody);
-    document.getElementById(songs).appendChild(cardDiv);
-    
+    document.getElementById('songs').appendChild(cardDiv);
+
+
 }
 function printData(songObject){
     console.log('Object data', songObject);
     document.getElementById('songs').innerHTML='';
     const songs = songObject['results'];
-    songs.foreach(song => songCard(song));
+    songs.forEach(song => songCard(song));
 }
