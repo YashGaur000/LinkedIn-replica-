@@ -1,9 +1,17 @@
-// Its a bridge file b/w App.js(root component)  and  indexedDB.html(page)
+// Its a bridge file b/w App.js(root component)  and  index.html(page)
+// indexedDB.html gives DOM
 // App.js will give VDOM
+// JSX build VDOM
+// VDOM map to DOM by using ReactDOM
 // and indexedDB.js has ReactDOM, ReactDOM convert VDOM into DOM
 
-import App from "./App";
-import ReactDOM from 'react-dom';
+// import App from "./App";
+// import ReactDOM from 'react-dom/client';
+
+import React from 'react';
+import ReactDOM from 'react-dom/client';
+import './index.css';
+import App from './App';
 
 const div = document.querySelector('#root');
 const root = ReactDOM.createRoot(div);
@@ -13,10 +21,6 @@ root.render(<App/>);
 
 
 
-// import React from 'react';
-// import ReactDOM from 'react-dom/client';
-// import './index.css';
-// import App from './App';
 // import reportWebVitals from './reportWebVitals';
 
 // const root = ReactDOM.createRoot(document.getElementById('root'));

@@ -1,8 +1,20 @@
 // this is a root or first component
+//component just a small view. start with capital letter
+// component is a fxn in the end
+//component contains JSX. Its a OOPS.
 
+// import "./App.css";
 
 const App = ()=>{
-  return (<h1>Hello React JS</h1>);
+  const name = "VIPS"
+  const mystyle = {color:'blue', backgroundColor:'cyan'}
+  return <div>{name==='Amit'?}
+  // {/* <h1 style={mystyle}>Hello {name}</h1> */}
+  <h2>
+    Its MERN
+  </h2>
+    <greeting myname = {name}></greeting> //JSX style to call fxn
+  </div>
 }
 export default App;
 
