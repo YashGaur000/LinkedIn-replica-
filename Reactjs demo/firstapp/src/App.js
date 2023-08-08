@@ -3,43 +3,31 @@
 // component is a fxn in the end
 //component contains JSX. Its a OOPS.
 
-// import "./App.css";
+import React from "react";
+import './App.css';
+import { First } from "./Components/First";
+import { Second } from "./Components/Second";
+import { Third } from "./Components/Third";
 
-const App = ()=>{
-  const name = "VIPS"
-  const mystyle = {color:'blue', backgroundColor:'cyan'}
-  return <div>{name==='Amit'?}
-  // {/* <h1 style={mystyle}>Hello {name}</h1> */}
-  <h2>
-    Its MERN
-  </h2>
-    <greeting myname = {name}></greeting> //JSX style to call fxn
-  </div>
-}
+const App=()=>{
+  const value=3;
+  const conditionalRendering=()=>{
+    if (value === 1){
+      return <First msg='Hello'/>
+    }
+    if (value ===2){
+      return <Second/>
+    }
+    if (value === 3){
+      return <Third/>
+    }
+  }
+
+    const name='VIPS';
+      return (<>
+      
+      {conditionalRendering()}
+      <h1>Calling {name}</h1>
+      </>);
+  }
 export default App;
-
-// import logo from './logo.svg';
-// import './App.css';
-
-// function App() {
-//   return (
-//     <div className="App">
-//       <header className="App-header">
-//         <img src={logo} className="App-logo" alt="logo" />
-//         <p>
-//           Edit <code>src/App.js</code> and save to reload.
-//         </p>
-//         <a
-//           className="App-link"
-//           href="https://reactjs.org"
-//           target="_blank"
-//           rel="noopener noreferrer"
-//         >
-//           Learn React
-//         </a>
-//       </header>
-//     </div>
-//   );
-// }
-
-// export default App;
